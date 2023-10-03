@@ -3,14 +3,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login SamaruHousing</title>
+    <title>Register SamaruHousing</title>
     <!-- bootstrap cdn -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="CSS/login.css" />
+    <link rel="stylesheet" href="CSS/register.css" />
     <link rel="stylesheet" href="CSS/index.css">
   </head>
   <body>
@@ -64,14 +64,20 @@
           <div class="col-sm-12 col-md-6 form-img">
             <img
               class="img-fluid"
-              src="images/house1.jpg"
+              src="images/pexels-oleksandr-p-7599735.jpg"
               alt=""
             />
           </div>
 
           <form action="/form.php" autocomplete="on" class="col-sm-12 col-md-6 form">
             <h3>SamaruHousing</h3>
-            <p>Get safe and affordable hostel.</p>
+            <p>Get safe and affordable accommodation.</p>
+            <input for="fname" placeholder="First name"></input>
+            <input for="lname" placeholder="Last name"></input>
+            <input for="phone" placeholder="phone: 080-32 414 633" name="phone"><br>
+
+            <input for="text" placeholder="Matric No.."><br>
+            
             <input type="email" placeholder="Email"/>
             <input
               type="password"
@@ -86,8 +92,7 @@
             </label>
             <a href="#">Forgot Password</a> 
             </div>
-            
-            <input type="submit" value="Login" />
+            <input type="submit" value="Register" />
             <p >Dont have an account? <a href="#">Sign Up</a></p>
           </form>
         </div>
