@@ -69,22 +69,25 @@
             />
           </div>
 
-          <form action="/form.php" autocomplete="on" class="col-sm-12 col-md-6 form">
+          <form method="post" action="/form.php" autocomplete="on" class="col-sm-12 col-md-6 form">
             <h3>SamaruHousing</h3>
             <p>Get safe and affordable accommodation.</p>
             <input for="fname" placeholder="First name"></input>
             <input for="lname" placeholder="Last name"></input>
+
             <input for="phone" placeholder="phone: 080-32 414 633" name="phone"><br>
 
             <input for="text" placeholder="Matric No.."><br>
-            
-            <input type="email" placeholder="Email"/>
+            <input type= "email" spellcheck="false" id ="email-address" placeholder="Email">
             <input
               type="password"
               name="password"
               id="password"
-              placeholder="Password"
-            />
+              placeholder="Password">
+              <input for="date" type="date" placeholder="Birthday"></input>
+              <input type="radio" name="gender"value="Male">Male</input>
+              <input type="radio" name="gender" value="Female">Female</input>
+            
             <div class="miniText">
                <label>
               <input type="checkbox" checked="checked" name="remember" />

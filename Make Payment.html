@@ -1,0 +1,212 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>payment SamaruHousing</title>
+    <!-- bootstrap cdn -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/login.css" />
+    <link rel="stylesheet" href="CSS/index.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" >
+      <div>
+        <a class="navbar-brand" href="#">Samaru<span>Housing</span></a>
+      </div>
+      <div>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Listings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add Listing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn" href="register.html">Register</a>
+          </li>
+        </ul>
+      </div>
+      
+      </div>
+    </nav>
+    <!-- Header ends -->
+    <main>
+      <div class="container ">
+        <div class="row login-form">
+          <div class="col-sm-12 col-md-6 form-img">
+            <img
+              class="img-fluid"
+              src="images/house1.jpg"
+              alt=""
+            />
+          </div>
+
+          <form action="/form.php" autocomplete="on" class="col-sm-12 col-md-6 form">
+            <h3>SamaruHousing Payment platform</h3>
+            <p>safe and secure payment.</p>
+            <!-- <input type="email" placeholder="Email"/>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+            <div class="miniText">
+               <label>
+              <input type="checkbox" checked="checked" name="remember" />
+              Remember me
+            </label>
+            <a href="#">Forgot Password</a> 
+            </div>
+            
+            <input type="submit" value="Login" />
+            <p >Dont have an account? <a href="#">Sign Up</a></p> -->
+            <form id="paymentForm">
+              <div class="form-group">
+                <label for="email" aria-placeholder="">Email Address</label>
+                <input type="email" id="email-address" required />
+              </div>
+              <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="tel" id="amount" required />
+              </div>
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" />
+              </div>
+              <div class="form-submit">
+                <button type="submit" onclick="payWithPaystack()"> Pay </button>
+              </div>
+            </form>
+            
+            <script src="https://js.paystack.co/v1/inline.js"></script>
+          </form>
+        </div>
+      </div>
+    </main>
+
+  <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div>
+            <a class="navbar-brand" href="#">Samaru<span>Housing</span></a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="social-icons">
+              <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+              <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+              <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+              <a class="github" href="#"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+            <!-- <p class="text-justify">A web app that provides students with suitable accommodation when they input
+                 their preferred location, price range and type of accommodation they want. Also pairing students with other
+                  students around them also looking for accommodation and are open to sharing a preferred accommodation.
+                   Be an escrow between students and landlords/house agents to avoid students from being defrauded.</p> -->
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="#">Schools</a></li>
+              <li><a href="#">Listings</a></li>
+              <li><a href="#">Terms of use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#/">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Add Listing</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+         <a href="#">PJT-11</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+</footer>
+
+<!-- Include Paystack's JavaScript library in your HTML -->
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<!-- Add a button or form to trigger the payment -->
+<button onclick="payWithPaystack()">Pay with Paystack</button>
+
+<!-- JavaScript to handle the payment -->
+<script>
+  function payWithPaystack() {
+    var handler = PaystackPop.setup({
+      key: 'pk_test_b685356dbf32ecc20a3517e1dbd1fabd85c4519b',
+      email: 'customer@email.com', // Customer's email
+      amount: 10000, // Amount in kobo (e.g., 10000 kobo = ₦100)
+      currency: 'NGN', // Currency
+      ref: 'payment_reference', // Unique reference for the transaction
+      callback: function(response) {
+        // Handle the success callback here
+        alert('Payment successful. Transaction reference: ' + response.reference);
+      },
+      onClose: function() {
+        // Handle when the user closes the payment modal
+        alert('Payment canceled.');
+      }
+    });
+    handler.openIframe(); // Display the Paystack payment modal
+  }
+</script>
+
+
+
+    <!-- JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
