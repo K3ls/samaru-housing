@@ -64,19 +64,23 @@
             <h3 >SamaruHousing</h3>
             <i><p style="color: lightgray;">Get safe and affordable accommodation.</p></i>
             <div id="email_div" >
-              <span for="Categories">Select Category:</span> 
-              <select placeholder="Select Categories required">
-                <option value="" disabled selected>Select a Category</option>
-              <option value="singleRoom">Single Room self-cou</option>
-              <option value="doubleRoom">Double Room self-cou</option>
-              <option value="familyRoom">Family Room self-cou</option>
+              <span for="Categories">Category:</span> 
+              <select placeholder="Select Categories required" required>
+                <option value="" disabled selected>Select a category</option>
+              <option value="singleRoom">Single Room self-contained</option>
+              <option value="doubleRoom">Double Room self-contained</option>
+              <option value="familyRoom">Family Room self-contained</option>
+              <option value="MIni Flat">Mini Flat</option>
+              <option value="One-Room BQ">One-Room BQ</option>
+              <option value="boungalow">boungalow</option>
+              <option value="shared apartment">shared apartment</option>
               </select>
 
             
             </div>
               <div>
-              <label for="locations" style="display: inline">Select a Location:</label>
-              <select id="locations" name="locations">
+              <label for="locations" style="display: inline">Location:</label>
+              <select id="locations" name="locations" required>
                 <option value="" disabled selected>Select a Location</option>
                   <option value="danraka">Danraka</option>
                   <option value="zango">Zango</option>
@@ -85,12 +89,14 @@
                   <option value="shika">Shika</option>
                   <option value="paladam">Paladam</option>
               </select>
-</div>
+
+             </div>
             <label for="describtion" style="display: inline">Describtion 
-            <textarea  id="text-area" name="text-area" placeholder="Describtion of apartment" rows="8" cols="50"></textarea></label>
-            <br>
-           <button type="submit" value="Submit" style="border-radius: 10px; padding: 10px;">Submit</button>
-             
+            <textarea  id="text-area" name="text-area" placeholder="Describtion of apartment" rows="4" cols="20"></textarea></label>
+          
+            <input type="file" id="image-upload" multiple accept="image/*"  readonly>
+            <div id="image-preview" style="display: flex; flex-wrap: wrap;"></div>
+             <button type="button" style="padding: 20px; border-radius: 10px; margin-top: 10px;">Upload</button>
             </form>
         </div>
       
@@ -157,5 +163,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+    <script>
+    const imageUpload = document.getElementById('image-upload');
+const imagePreview = document.getElementById('image-preview');
+
+imageUpload.addEventListener('change', function () {
+    // imagePreview.innerHTML = ''; // Clear previous previews
+
+    const files = this.files;
+
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                const img = document.createElement('img');
+                img.src = event.target.result;
+                img.classList.add('preview-image');
+                imagePreview.appendChild(img);
+            };
+
+            reader.readAsDataURL(file);
+        }
+    }
+});
+    </script>
   </body>
 </html>

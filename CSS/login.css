@@ -67,6 +67,11 @@ input[type="checkbox"] {
   border-left: 1px solid lightgray;
 
 }
+.preview-image {
+  margin: 10px;
+  max-width: 150px;
+  max-height: 150px;
+}
 @media (max-width: 867px) {
   .form-img {
     display: none;
@@ -74,4 +79,5 @@ input[type="checkbox"] {
   .login-form {
     width: 100%;
   }
+  
 }

@@ -42,3 +42,7 @@ emailInput.addEventListener('keydown', function() {
   }
 });
 
+/* code session for house image upload and preview */
+
+
+/* end */
