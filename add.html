@@ -1,0 +1,161 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add-SamaruHousing</title>
+    <!-- bootstrap cdn -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/login.css" />
+    <link rel="stylesheet" href="CSS/index.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" >
+      <div>
+        <a class="navbar-brand" href="#">Samaru<span>Housing</span></a>
+      </div>
+      <div>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Listings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="add.html">Add Listing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn" href="register.html">Register</a>
+          </li>
+        </ul>
+      </div>
+      
+      </div>
+    </nav>
+    <!-- Header ends -->
+    <main>
+        <div class="add_form">
+                  <form action="/form.php" autocomplete="on" style="width: 100%;">
+            <h3 >SamaruHousing</h3>
+            <i><p style="color: lightgray;">Get safe and affordable accommodation.</p></i>
+            <div id="email_div" >
+              <span for="Categories">Select Category:</span> 
+              <select placeholder="Select Categories required">
+                <option value="" disabled selected>Select a Category</option>
+              <option value="singleRoom">Single Room self-cou</option>
+              <option value="doubleRoom">Double Room self-cou</option>
+              <option value="familyRoom">Family Room self-cou</option>
+              </select>
+
+            
+            </div>
+              <div>
+              <label for="locations" style="display: inline">Select a Location:</label>
+              <select id="locations" name="locations">
+                <option value="" disabled selected>Select a Location</option>
+                  <option value="danraka">Danraka</option>
+                  <option value="zango">Zango</option>
+                  <option value="silver">Silver</option>
+                  <option value="graceland">Graceland</option>
+                  <option value="shika">Shika</option>
+                  <option value="paladam">Paladam</option>
+              </select>
+</div>
+            <label for="describtion" style="display: inline">Describtion 
+            <textarea  id="text-area" name="text-area" placeholder="Describtion of apartment" rows="8" cols="50"></textarea></label>
+            <br>
+           <button type="submit" value="Submit" style="border-radius: 10px; padding: 10px;">Submit</button>
+             
+            </form>
+        </div>
+      
+    </main>
+
+  <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div>
+            <a class="navbar-brand" href="#">Samaru<span>Housing</span></a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="social-icons">
+              <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+              <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+              <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+              <a class="github" href="#"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+            <!-- <p class="text-justify">A web app that provides students with suitable accommodation when they input
+                 their preferred location, price range and type of accommodation they want. Also pairing students with other
+                  students around them also looking for accommodation and are open to sharing a preferred accommodation.
+                   Be an escrow between students and landlords/house agents to avoid students from being defrauded.</p> -->
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="#">Schools</a></li>
+              <li><a href="#">Listings</a></li>
+              <li><a href="#">Terms of use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#/">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Add Listing</a></li>
+              <li><a href="#">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+         <a href="#">PJT-11</a>.
+            </p>
+          </div>
+        </div>
+</footer>
+
+
+    <!-- JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
