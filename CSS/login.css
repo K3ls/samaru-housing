@@ -16,7 +16,7 @@
   text-align: center;
   background-color: #ededed;
 }
-.form input, select,textarea {
+.form input, select,textarea , button{
   width: 90%;
   padding: 10px;
   margin: 14px auto;
