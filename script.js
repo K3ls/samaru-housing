@@ -1,6 +1,10 @@
 $(".carousel").carousel({
   interval: 3000,
 });
+/**all global variables definition and initialization */
+let users = [];
+
+/**end of declaration */
 
 function isValidEmail(email) {
   // Regular expression to match a valid email address
@@ -29,7 +33,7 @@ emailInput.addEventListener('keydown', function() {
   var emailValue = emailInput.value;
   var isValid = isValidEmail(emailValue);
   
-  if (!isValid) {
+  if (isValid) {
     // The email is valid, you can perform actions accordingly
     // Step 1: Create a new element
     newElement.style.display="block"
@@ -46,3 +50,64 @@ emailInput.addEventListener('keydown', function() {
 
 
 /* end */
+
+/*code section for page registration  */
+
+function registration (){
+  const email = document.querySelector('#email').value;
+  const password = document.querySelector('#password').value;
+  const firstName = document.querySelector('#firstName').value;
+  const lastName = document.querySelector('#lastName').value;
+  const dateOfBirth = document.querySelector('#dateOfBirth').value;
+  const phone =  document.querySelector('#phone').value;
+  const regNo =  document.querySelector('#regNo').value;
+  const user = {
+    email,
+    password,
+    firstName,
+    lastName,
+    dateOfBirth,
+    phone,
+    regNo
+  }
+// add the new user to the users array
+
+  users?.push(user);
+localStorage.setItem('user_data', JSON.stringify(users));
+// Get the array from localStorage and parse it back to an object
+const storedArray = JSON.parse(localStorage.getItem("user_data"));
+
+// Find the item with id 2 and update its name
+const updatedArray =[...storedArray]
+// Update the array in localStorage with the modified version
+localStorage.setItem("user_data", JSON.stringify(updatedArray));
+
+  alert("Rrgistration Successful")
+  // Redirect to a new URL
+ window.location.href = "home.html";
+console.log(users, "damian");
+
+
+}
+   
+
+
+/*end of section for registration* */
+
+/**code sectioon for loggging in */
+
+
+function login(){
+  const email = document.querySelector('#email').value;
+  const password = document.querySelector('#password').value;
+ if(email =="k3lvinkings@gmail.com" && password == "1234"){
+  alert("login succussful");
+  window.location.href="home.html";
+  
+ }
+ else{
+  alert("wrong email or password");
+  window.location.href="login.html";
+ }
+}
+/**end of section for logging in */
