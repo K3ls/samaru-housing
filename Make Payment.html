@@ -17,7 +17,7 @@
     <!-- Header -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" >
       <div>
-        <a class="navbar-brand" href="#">Samaru<span>Housing</span></a>
+        <a class="navbar-brand" href="home.html">Samaru<span>Housing</span></a>
       </div>
       <div>
         <button
@@ -34,17 +34,17 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a
+            <a class="nav-link" href="home.html">Home</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Listings</a>
+            <a class="nav-link" href="#listing">Listings</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="about.html">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Add Listing</a>
+            <a class="nav-link" href="add.html">Add Listing</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn" href="login.html">Login</a>
@@ -69,7 +69,7 @@
             />
           </div>
 
-          <form action="/form.php" autocomplete="on" class="col-sm-12 col-md-6 form">
+          <form  autocomplete="on" class="col-sm-12 col-md-6 form">
             <h3>SamaruHousing Payment platform</h3>
             <p>safe and secure payment.</p>
             <!-- <input type="email" placeholder="Email"/>
@@ -91,23 +91,23 @@
             <p >Dont have an account? <a href="#">Sign Up</a></p> -->
             <form id="paymentForm">
               <div class="form-group">
-                <label for="email" aria-placeholder="">Email Address</label>
-                <input type="email" id="email-address" required />
-              </div>
+                <!-- <label for="email" aria-placeholder="">Email Address</label>
+                <input type="email" placeholder="email-address" id="email-address" required />
+              </div> -->
               <div class="form-group">
                 <label for="amount">Amount</label>
-                <input type="tel" id="amount" required />
+                <input type="tel" placeholder="Amount: &#8358;" id="amount" required />
               </div>
               <div class="form-group">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" />
+                <input type="text" placeholder="First Name" id="first-name" />
               </div>
               <div class="form-group">
                 <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" />
+                <input type="text" placeholder="Last Name" id="last-name" />
               </div>
               <div class="form-submit">
-                <button type="submit" onclick="payWithPaystack()"> Pay </button>
+                <button type="button" onclick="payWithPaystack()"> Pay </button>
               </div>
             </form>
             
@@ -142,9 +142,9 @@
           <div class="col-xs-6 col-md-3">
             <h6>Categories</h6>
             <ul class="footer-links">
-              <li><a href="#">Schools</a></li>
-              <li><a href="#">Listings</a></li>
-              <li><a href="#">Terms of use</a></li>
+              <li><a href="https://abu.edu.ng/">School's website</a></li>
+              <li><a href="#listing">Listings</a></li>
+              <li><a href="T&C.html">Terms of use</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
@@ -152,8 +152,8 @@
           <div class="col-xs-6 col-md-3">
             <h6>Quick Links</h6>
             <ul class="footer-links">
-              <li><a href="#/">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="https://">Contact Us</a></li>
               <li><a href="#">Add Listing</a></li>
               <li><a href="#">Sitemap</a></li>
             </ul>
@@ -194,6 +194,7 @@
       onClose: function() {
         // Handle when the user closes the payment modal
         alert('Payment canceled.');
+        // window.location.href="home.html";
       }
     });
     handler.openIframe(); // Display the Paystack payment modal

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  },
+  "name": "samaru-housing",
+  "description": "A web app that provides students with suitable accommodation when they input their preferred location, price range and type of accommodation they want. Also pairing students with other students around them also looking for accommodation and are open to sharing a preferred accommodation. Be an escrow between students and landlords/house agents to avoid students from being defrauded.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
