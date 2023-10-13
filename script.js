@@ -1,6 +1,8 @@
 $(".carousel").carousel({
   interval: 3000,
 });
+
+
 /**all global variables definition and initialization */
 let users = [];
 
@@ -111,3 +113,33 @@ function login(){
  }
 }
 /**end of section for logging in */
+
+
+/**code section for shoeing loader */
+
+// Get references to the loader elements
+const searchButton = document.querySelector('#search');
+
+// Function to show the loader
+function showLoader() {
+    searchButton.style.display="none";
+}
+
+// Function to hide the loader
+function hideLoader() {
+    loaderContainer.style.display = 'none';
+    searchButton.style.display="block";
+}
+
+// Simulate an asynchronous task (e.g., a setTimeout)
+const loaderContainer = document.getElementById('#loading');
+
+function simulateAsyncTask() {
+
+    setTimeout(() => {
+        alert('error in connection')
+    }, 3000); // Replace with your actual task and duration
+}
+
+// Add an event listener to a button to trigger the loader
+
